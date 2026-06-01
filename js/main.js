@@ -82,6 +82,19 @@
     if (map && adresse && adresse !== "Åmot") {
       map.src = "https://www.google.com/maps?q=" + encodeURIComponent(adresse) + "&output=embed";
     }
+
+    /* ---------- Logo (lastet opp via portalen) ---------- */
+    const brand = $(".nav__brand");
+    if (brand && info.logo) {
+      brand.innerHTML = `<img src="${info.logo}" alt="${info.navn || "Logo"}" class="nav__logo">`;
+    }
+
+    /* ---------- Bilde av salongen i Om oss ---------- */
+    const omMedia = $(".om__media");
+    if (omMedia && info.salongBilde) {
+      omMedia.innerHTML = `<img src="${info.salongBilde}" alt="${info.navn || "Salongen"}">`;
+      omMedia.removeAttribute("aria-hidden");
+    }
   }
 
   /* ---------- Mobilmeny (uavhengig av innhold) ---------- */
