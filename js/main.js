@@ -8,11 +8,22 @@
   const $  = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  // Hent live-innhold; fall tilbake til data.js (window.SALON_DATA) ved feil.
-  fetch("content/innhold.json", { cache: "no-store" })
-    .then(r => { if (!r.ok) throw new Error("ikke funnet"); return r.json(); })
-    .then(render)
-    .catch(() => render(window.SALON_DATA || {}));
+  // Forhåndsvisning fra Studio-portalen: når siden vises i en iframe med
+  // #preview, venter vi på innhold via postMessage i stedet for å hente fila.
+  const inPreview = window.parent !== window && location.hash.indexOf("preview") !== -1;
+  if (inPreview) {
+    window.addEventListener("message", (e) => {
+      const m = e.data;
+      if (m && m.type === "studioportal-preview") render(m.content || {});
+    });
+    try { window.parent.postMessage({ type: "studioportal-ready" }, "*"); } catch (e) {}
+  } else {
+    // Hent live-innhold; fall tilbake til data.js (window.SALON_DATA) ved feil.
+    fetch("content/innhold.json", { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error("ikke funnet"); return r.json(); })
+      .then(render)
+      .catch(() => render(window.SALON_DATA || {}));
+  }
 
   function render(D) {
     D = D || {};
