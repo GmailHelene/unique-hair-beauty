@@ -88,8 +88,13 @@
   const toggle = $("#navToggle");
   const navLinks = $("#navLinks");
   if (toggle && navLinks) {
-    toggle.addEventListener("click", () => navLinks.classList.toggle("open"));
-    $$("a", navLinks).forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+    const setOpen = (open) => {
+      navLinks.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Lukk meny" : "Åpne meny");
+    };
+    toggle.addEventListener("click", () => setOpen(!navLinks.classList.contains("open")));
+    $$("a", navLinks).forEach(a => a.addEventListener("click", () => setOpen(false)));
   }
 
   /* ---------- Årstall i footer ---------- */

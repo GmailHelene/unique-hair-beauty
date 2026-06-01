@@ -18,6 +18,19 @@ Fyll inn disse før lansering:
 - `bookingUrl` – lim inn hele Timma-lenken
 - `instagram` (lagt inn) / `facebook` (valgfritt)
 
+## SEO / AEO
+Siden er optimalisert for søkemotorer og AI-svarmotorer:
+- Strukturerte data (JSON-LD: `LocalBusiness`/`HairSalon` + `FAQPage`) i `index.html`
+- Meta-tagger, Open Graph, Twitter-kort, canonical, `robots.txt`, `sitemap.xml`
+- FAQ-seksjon, semantisk `<main>`, hopp-til-innhold, `<noscript>`-fallback
+
+**Før lansering:** søk og bytt plassholder-domenet `https://uniquehairbeauty.no/`
+til det ekte domenet i `index.html`, `robots.txt` og `sitemap.xml`.
+Legg gjerne til et delebilde `assets/og-image.jpg` (1200×630) for pene
+lenkeforhåndsvisninger i sosiale medier.
+Hvis adresse/telefon/åpningstider endres, oppdater også JSON-LD-blokken
+øverst i `index.html` (den er bevisst statisk for søkerobotene).
+
 ## Logo og bilder
 - **Logo:** legg `logo.png` i `assets/`, og bytt ut tekst-logoen i
   `index.html` (se kommentar ved `nav__brand`).

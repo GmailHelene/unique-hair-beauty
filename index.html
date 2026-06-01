@@ -3,131 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unique Hair & Beauty – Frisør, negler og vipper i Åmot</title>
-  <meta name="description" content="Unique Hair & Beauty i Åmot tilbyr frisør, negledesign og vippedesign i et lyst og elegant miljø. Bestill time enkelt på nett." />
 
-  <!-- Open Graph (deling på Facebook/Insta) -->
-  <meta property="og:title" content="Unique Hair & Beauty – Åmot" />
-  <meta property="og:description" content="Frisør · Negledesign · Vippedesign i Åmot." />
+  <!-- ===== SEO: tittel & beskrivelse ===== -->
+  <title>Unique Hair &amp; Beauty – Frisør, negler og vipper i Åmot, Modum</title>
+  <meta name="description" content="Unique Hair & Beauty i Åmot (Modum) tilbyr frisør, negledesign og vippedesign i et lyst, elegant miljø. Bestill time enkelt på nett hos Celine og Janina." />
+  <meta name="keywords" content="frisør Åmot, frisør Modum, negledesign Åmot, vippeextensions Modum, vippeløft, neglesalong, frisørsalong Buskerud" />
+  <meta name="author" content="Unique Hair & Beauty" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#c4a35a" />
+
+  <!-- Sett inn riktig domene når siden er publisert: -->
+  <link rel="canonical" href="https://uniquehairbeauty.no/" />
+
+  <!-- Geo (lokal SEO) -->
+  <meta name="geo.region" content="NO" />
+  <meta name="geo.placename" content="Åmot, Modum" />
+
+  <!-- ===== Open Graph (deling på Facebook/Instagram) ===== -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Unique Hair & Beauty" />
+  <meta property="og:title" content="Unique Hair & Beauty – Frisør, negler og vipper i Åmot" />
+  <meta property="og:description" content="Frisør · Negledesign · Vippedesign i Åmot, Modum. Bestill time enkelt på nett." />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:url" content="https://uniquehairbeauty.no/" />
+  <!-- Legg gjerne til et delebilde (1200×630): assets/og-image.jpg -->
+  <meta property="og:image" content="https://uniquehairbeauty.no/assets/og-image.jpg" />
 
-  <!-- Fonter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Unique Hair & Beauty – Åmot, Modum" />
+  <meta name="twitter:description" content="Frisør · Negledesign · Vippedesign. Bestill time på nett." />
+
+  <!-- ===== Fonter ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- =====================================================================
+       STRUKTURERTE DATA (JSON-LD) – for Google og AI-svarmotorer (AEO).
+       MERK: Hvis adresse, telefon eller åpningstider endres, oppdater også
+       verdiene her (de er bevisst statiske for at søkeroboter skal lese dem).
+       ===================================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["HairSalon", "BeautySalon"],
+    "name": "Unique Hair & Beauty",
+    "description": "Salong i Åmot, Modum med frisør, negledesign og vippedesign.",
+    "image": "https://uniquehairbeauty.no/assets/og-image.jpg",
+    "url": "https://uniquehairbeauty.no/",
+    "telephone": "+4797299191",
+    "email": "beautybyjcp@gmail.com",
+    "priceRange": "$$",
+    "currenciesAccepted": "NOK",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Eikerveien 38B",
+      "postalCode": "3340",
+      "addressLocality": "Åmot",
+      "addressRegion": "Buskerud",
+      "addressCountry": "NO"
+    },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Modum" },
+    "hasMap": "https://www.google.com/maps?q=Eikerveien+38B,+3340+Åmot",
+    "sameAs": [
+      "https://www.instagram.com/unique.hair.and.beauty",
+      "https://www.facebook.com/profile.php?id=61584111800210"
+    ],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "10:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "16:00" }
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frisør" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Negledesign" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vippedesign" } }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvor ligger Unique Hair & Beauty?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vi holder til i Eikerveien 38B, 3340 Åmot i Modum kommune." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvilke behandlinger tilbyr dere?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vi tilbyr frisør, negledesign og vippedesign – alt under ett tak." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvordan bestiller jeg time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Du booker enkelt på nett via Timma-siden vår, eller ringer oss på 972 99 191." }
+      },
+      {
+        "@type": "Question",
+        "name": "Tilbyr dere vippeextensions og vippeløft?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja. Vi tilbyr både klassiske vippeextensions, volum-vipper, påfyll og vippeløft (lash lift)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvem jobber i salongen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Du møter Celine og Janina, som begge har lidenskap for frisør, negler og vipper." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <a href="#hovedinnhold" class="skip-link">Hopp til innhold</a>
 
   <!-- ===================== NAVIGASJON ===================== -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">
+      <a href="#top" class="nav__brand" aria-label="Unique Hair & Beauty – til toppen">
         <!-- Bytt ut med logo: <img src="assets/logo.png" alt="Unique Hair & Beauty" class="nav__logo"> -->
         <span class="nav__brand-text">Unique <em>Hair &amp; Beauty</em></span>
       </a>
 
-      <nav class="nav__links" id="navLinks">
+      <nav class="nav__links" id="navLinks" aria-label="Hovedmeny">
         <a href="#behandlinger">Behandlinger</a>
         <a href="#om">Om oss</a>
+        <a href="#faq">Spørsmål</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#" class="btn btn--gold nav__cta" data-booking>Bestill time</a>
       </nav>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Meny">
+      <button class="nav__toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content frost">
-      <p class="hero__eyebrow" data-slagord>Frisør · Negledesign · Vippedesign</p>
-      <h1 class="hero__title" data-navn>Unique Hair &amp; Beauty</h1>
-      <p class="hero__lead" data-kort>En liten, eksklusiv salong i Åmot.</p>
-      <div class="hero__actions">
-        <a href="#" class="btn btn--gold" data-booking>Bestill time</a>
-        <a href="#behandlinger" class="btn btn--ghost">Se behandlinger</a>
+  <main id="hovedinnhold">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-label="Velkommen">
+      <div class="hero__overlay"></div>
+      <div class="hero__content frost">
+        <p class="hero__eyebrow" data-slagord>Frisør · Negledesign · Vippedesign</p>
+        <h1 class="hero__title" data-navn>Unique Hair &amp; Beauty</h1>
+        <p class="hero__lead" data-kort>En liten, eksklusiv salong i Åmot.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--gold" data-booking>Bestill time</a>
+          <a href="#behandlinger" class="btn btn--ghost">Se behandlinger</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== BEHANDLINGER & PRISER ===================== -->
-  <section class="section" id="behandlinger">
-    <div class="section__head">
-      <p class="eyebrow">Prisliste</p>
-      <h2>Behandlinger &amp; priser</h2>
-      <p class="section__sub">Priser er veiledende. Ta gjerne kontakt for et uforpliktende tilbud.</p>
-    </div>
-
-    <div class="cards" id="prisCards">
-      <!-- Fylles automatisk fra js/data.js -->
-    </div>
-
-    <div class="section__cta">
-      <a href="#" class="btn btn--gold" data-booking>Bestill time nå</a>
-    </div>
-  </section>
-
-  <!-- ===================== OM OSS ===================== -->
-  <section class="section section--alt" id="om">
-    <div class="om">
-      <div class="om__media frost" aria-hidden="true">
-        <!-- Bytt ut med bilde av salongen: <img src="assets/salong.jpg" alt="Salongen"> -->
-        <span class="om__placeholder">Bilde av salongen</span>
+    <noscript>
+      <div class="noscript">
+        <h2>Unique Hair &amp; Beauty – Åmot, Modum</h2>
+        <p>Frisør, negledesign og vippedesign hos Celine og Janina.
+           Adresse: Eikerveien 38B, 3340 Åmot. Telefon: 972 99 191.
+           Bestill time: <a href="https://bestill.timma.no/uniquehairandbeauty">bestill.timma.no/uniquehairandbeauty</a>.</p>
       </div>
-      <div class="om__text">
-        <p class="eyebrow">Om oss</p>
-        <h2>Et sted som føles helt deg</h2>
-        <p data-omoss></p>
-        <a href="#kontakt" class="btn btn--ghost">Finn oss</a>
-      </div>
-    </div>
-  </section>
+    </noscript>
 
-  <!-- ===================== KONTAKT ===================== -->
-  <section class="section" id="kontakt">
-    <div class="section__head">
-      <p class="eyebrow">Kontakt</p>
-      <h2>Velkommen innom</h2>
-    </div>
-
-    <div class="kontakt">
-      <div class="kontakt__info frost">
-        <h3>Kontaktinformasjon</h3>
-        <ul class="kontakt__list">
-          <li><span>Adresse</span><strong data-adresse>Åmot</strong></li>
-          <li><span>Telefon</span><strong><a data-tel href="#">—</a></strong></li>
-          <li><span>E-post</span><strong><a data-epost href="#">—</a></strong></li>
-        </ul>
-
-        <h3>Åpningstider</h3>
-        <ul class="kontakt__hours" id="apningstider"></ul>
-
-        <div class="kontakt__social" id="social"></div>
-
-        <a href="#" class="btn btn--gold kontakt__book" data-booking>Bestill time</a>
+    <!-- ===================== BEHANDLINGER & PRISER ===================== -->
+    <section class="section" id="behandlinger" aria-labelledby="behandlinger-tittel">
+      <div class="section__head">
+        <p class="eyebrow">Prisliste</p>
+        <h2 id="behandlinger-tittel">Behandlinger &amp; priser</h2>
+        <p class="section__sub">Priser er veiledende. Ta gjerne kontakt for et uforpliktende tilbud.</p>
       </div>
 
-      <div class="kontakt__map frost">
-        <!-- Google Maps: erstatt q= med nøyaktig adresse når den er klar -->
-        <iframe
-          title="Kart til Unique Hair & Beauty"
-          src="https://www.google.com/maps?q=Åmot,%203340&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="cards" id="prisCards">
+        <!-- Fylles automatisk fra content/innhold.json -->
       </div>
-    </div>
-  </section>
+
+      <div class="section__cta">
+        <a href="#" class="btn btn--gold" data-booking>Bestill time nå</a>
+      </div>
+    </section>
+
+    <!-- ===================== OM OSS ===================== -->
+    <section class="section section--alt" id="om" aria-labelledby="om-tittel">
+      <div class="om">
+        <div class="om__media frost" aria-hidden="true">
+          <!-- Bytt ut med bilde av salongen: <img src="assets/salong.jpg" alt="Interiør hos Unique Hair & Beauty i Åmot"> -->
+          <span class="om__placeholder">Bilde av salongen</span>
+        </div>
+        <div class="om__text">
+          <p class="eyebrow">Om oss</p>
+          <h2 id="om-tittel">Et sted som føles helt deg</h2>
+          <p data-omoss></p>
+          <a href="#kontakt" class="btn btn--ghost">Finn oss</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ (bra for AEO/AI-svarmotorer) ===================== -->
+    <section class="section" id="faq" aria-labelledby="faq-tittel">
+      <div class="section__head">
+        <p class="eyebrow">Ofte stilte spørsmål</p>
+        <h2 id="faq-tittel">Spørsmål og svar</h2>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>Hvor ligger Unique Hair &amp; Beauty?</summary>
+          <p>Vi holder til i Eikerveien 38B, 3340 Åmot i Modum kommune.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Hvilke behandlinger tilbyr dere?</summary>
+          <p>Vi tilbyr frisør, negledesign og vippedesign – alt under ett tak.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Hvordan bestiller jeg time?</summary>
+          <p>Du booker enkelt på nett via <a href="#" data-booking>Timma-siden vår</a>, eller ringer oss på 972 99 191.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Tilbyr dere vippeextensions og vippeløft?</summary>
+          <p>Ja. Vi tilbyr både klassiske vippeextensions, volum-vipper, påfyll og vippeløft (lash lift).</p>
+        </details>
+        <details class="faq__item">
+          <summary>Hvem jobber i salongen?</summary>
+          <p>Du møter Celine og Janina, som begge har lidenskap for frisør, negler og vipper.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAKT ===================== -->
+    <section class="section" id="kontakt" aria-labelledby="kontakt-tittel">
+      <div class="section__head">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="kontakt-tittel">Velkommen innom</h2>
+      </div>
+
+      <div class="kontakt">
+        <div class="kontakt__info frost">
+          <h3>Kontaktinformasjon</h3>
+          <ul class="kontakt__list">
+            <li><span>Adresse</span><strong data-adresse>Åmot</strong></li>
+            <li><span>Telefon</span><strong><a data-tel href="#">—</a></strong></li>
+            <li><span>E-post</span><strong><a data-epost href="#">—</a></strong></li>
+          </ul>
+
+          <h3>Åpningstider</h3>
+          <ul class="kontakt__hours" id="apningstider"></ul>
+
+          <div class="kontakt__social" id="social"></div>
+
+          <a href="#" class="btn btn--gold kontakt__book" data-booking>Bestill time</a>
+        </div>
+
+        <div class="kontakt__map frost">
+          <!-- Google Maps: oppdateres automatisk fra adressen i content/innhold.json -->
+          <iframe
+            title="Kart til Unique Hair & Beauty i Åmot"
+            src="https://www.google.com/maps?q=Eikerveien%2038B,%203340%20%C3%85mot&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <p class="footer__brand">Unique <em>Hair &amp; Beauty</em></p>
-    <p class="footer__small">© <span id="year"></span> Unique Hair &amp; Beauty · Åmot ·
+    <p class="footer__small">© <span id="year"></span> Unique Hair &amp; Beauty · Eikerveien 38B, 3340 Åmot ·
       <a href="#top">Til toppen</a></p>
     <p class="footer__credit">Nettside av <a href="https://helene.cloud" target="_blank" rel="noopener">helene.cloud</a></p>
   </footer>

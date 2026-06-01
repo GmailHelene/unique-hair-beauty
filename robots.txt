@@ -1,0 +1,6 @@
+# Tillat alle søkemotorer og AI-svarmotorer
+User-agent: *
+Allow: /
+
+# Oppdater domenet under når siden er publisert:
+Sitemap: https://uniquehairbeauty.no/sitemap.xml
