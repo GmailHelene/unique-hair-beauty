@@ -1,58 +1,73 @@
-# Sette opp CMS-et (/admin) – steg for steg
+# Sette opp CMS – steg for steg
 
-Salongen skal kunne logge inn på `dittdomene.no/admin` og endre tekst,
-behandlinger og priser i et skjema – uten å røre kode. Innholdet lagres i
+Salongen (eller du) skal kunne logge inn og endre tekst, behandlinger og
+priser i et skjema – uten å røre kode. Innholdet lagres i
 `content/innhold.json`, og nettsiden leser det automatisk.
 
-CMS-et (Sveltia/Decap) trenger to ting for å virke i drift:
-1. at koden ligger i et **GitHub-repo**
-2. en **GitHub-innlogging** (OAuth) så endringer kan lagres
+Prosjektet er klargjort for **to** CMS-er:
 
-Disse stegene må gjøres én gang (av Helene). Etterpå er det bare å logge inn.
+| | Pages CMS (anbefalt) | Sveltia CMS |
+|---|---|---|
+| Konfig | `.pages.yml` | `admin/` + `config.yml` |
+| Innlogging | GitHub via app.pagescms.org | krever egen GitHub OAuth-app |
+| Oppsett | ~2 min, ingen OAuth | mer fikling |
+| Adresse | app.pagescms.org | `dittdomene.no/admin` |
+
+Start med **Pages CMS**. Sveltia ligger klart som alternativ hvis du
+heller vil ha innloggingen på ditt eget domene senere.
 
 ---
 
-## 1. Legg prosjektet på GitHub
+## Steg 1 – Legg prosjektet på GitHub
+Se kommandoene nederst (`gh`-oppskrift). Kort fortalt:
 ```bash
 cd unique-hair-beauty
-git init
-git add .
-git commit -m "Unique Hair & Beauty nettside"
-gh repo create unique-hair-beauty --private --source=. --push
+gh repo create unique-hair-beauty --public --source=. --push
 ```
-Åpne så `admin/config.yml` og bytt `BRUKERNAVN/unique-hair-beauty`
-til ditt faktiske repo (f.eks. `GmailHelene/unique-hair-beauty`).
 
-## 2. Publiser siden på Netlify (gratis)
-- Logg inn på netlify.com → **Add new site → Import from GitHub** → velg repoet.
+## Steg 2 – Publiser siden gratis (Netlify)
+- Logg inn på netlify.com → **Add new site → Import an existing project** → velg repoet.
 - Build command: *(tom)* · Publish directory: `.`
 - Siden er live på en `*.netlify.app`-adresse. Koble eget domene under
   **Domain settings** når dere har et.
 
-## 3. Skru på innlogging (GitHub OAuth)
-Sveltia/Decap trenger en OAuth-app for å la deg logge inn med GitHub:
+## Steg 3 – Skru på redigering med Pages CMS (anbefalt)
+1. Gå til **[app.pagescms.org](https://app.pagescms.org)** og logg inn med GitHub.
+2. Godkjenn Pages CMS-appen for repoet `unique-hair-beauty`.
+3. Pages CMS leser `.pages.yml` automatisk → du får et skjema for å redigere
+   salonginfo, åpningstider, behandlinger og priser.
+4. Lagring committer til GitHub → Netlify oppdaterer siden automatisk.
 
-1. GitHub → **Settings → Developer settings → OAuth Apps → New OAuth App**
-   - Homepage URL: `https://<ditt-netlify-domene>`
-   - Authorization callback URL: `https://api.netlify.com/auth/done`
-2. Kopier **Client ID** og **Client Secret**.
-3. Netlify → siden din → **Site configuration → Access & security →
-   OAuth → Install provider → GitHub**, og lim inn Client ID + Secret.
-
-Nå kan du gå til `https://<ditt-domene>/admin`, logge inn med GitHub,
-og redigere alt. Endringer committes til repoet og siden oppdateres
-automatisk.
-
-> 💡 **Enklere alternativ uten OAuth-oppsett:** [Pages CMS](https://pagescms.org).
-> Logg inn på app.pagescms.org med GitHub, gi tilgang til repoet, ferdig.
-> (Krever en liten `.pages.yml` i stedet for `admin/` – si fra, så lager jeg den.)
+> Skal salongen redigere selv, lager du en GitHub-bruker til dem og gir den
+> tilgang til repoet. Da logger de inn på app.pagescms.org på samme måte.
 
 ---
 
-## Teste CMS-et lokalt (valgfritt)
+## Alternativ: Sveltia CMS (innlogging på eget domene)
+Hvis du heller vil ha `dittdomene.no/admin`:
+1. Bytt `BRUKERNAVN/unique-hair-beauty` i `admin/config.yml` til ditt repo.
+2. GitHub → **Settings → Developer settings → OAuth Apps → New OAuth App**
+   - Homepage URL: `https://<ditt-netlify-domene>`
+   - Authorization callback URL: `https://api.netlify.com/auth/done`
+3. Netlify → siden din → **Site configuration → Access & security → OAuth →
+   Install provider → GitHub** → lim inn Client ID + Secret.
+4. Gå til `https://<ditt-domene>/admin` og logg inn.
+
+Lokal test av Sveltia: `npx @sveltia/cms-server` i én terminal, `npx serve .`
+i en annen, åpne `/admin`.
+
+---
+
+## gh-oppskrift (kjør i mappen `unique-hair-beauty`)
 ```bash
-npx @sveltia/cms-server   # kjør i én terminal
-npx serve .               # kjør i en annen, åpne /admin
+# 1. Er du logget inn på GitHub CLI? (hvis ikke: kjør og følg nettleseren)
+gh auth status || gh auth login
+
+# 2. Opprett repo på GitHub OG push i én kommando.
+#    Repoet er allerede git-initiert og committet lokalt.
+gh repo create unique-hair-beauty --public --source=. --remote=origin --push
+
+# (Vil du heller ha privat repo: bytt --public med --private.
+#  Netlify og Pages CMS funker fint med begge.)
 ```
-`local_backend: true` i config.yml gjør at endringer lagres rett i
-filene dine mens du tester.
+Etterpå: gå til Netlify (Steg 2) og Pages CMS (Steg 3). Ferdig.

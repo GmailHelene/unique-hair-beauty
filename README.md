@@ -35,9 +35,13 @@ Dra mappen inn på [netlify.com/drop](https://app.netlify.com/drop) eller
 koble repoet til Vercel/Netlify. Koble så eget domene.
 
 ## CMS – kunden redigerer selv via innlogging
-Siden har et lett, git-basert CMS (Sveltia, Decap-kompatibelt) under
-`admin/`. Kunden logger inn på `/admin` og endrer priser/tekst i skjema.
-Oppsett (GitHub + deploy + innlogging) er beskrevet i **`CMS-SETUP.md`**.
+Siden er klargjort for to CMS-er (se **`CMS-SETUP.md`**):
+- **Pages CMS** (anbefalt) – konfig i `.pages.yml`, logg inn på
+  app.pagescms.org med GitHub. Ingen OAuth-oppsett.
+- **Sveltia CMS** – konfig i `admin/`, gir innlogging på `dittdomene.no/admin`
+  (krever egen GitHub OAuth-app).
+
+Begge redigerer `content/innhold.json` i skjema – ingen kode.
 
 ---
 Laget av [helene.cloud](https://helene.cloud)

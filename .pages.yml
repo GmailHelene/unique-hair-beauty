@@ -1,0 +1,55 @@
+# ============================================================
+# Pages CMS – konfigurasjon (app.pagescms.org)
+# Gir et enkelt skjema for å redigere innholdet i content/innhold.json.
+# Logg inn på app.pagescms.org med GitHub, velg dette repoet, ferdig.
+# ============================================================
+
+media:
+  input: assets
+  output: /assets
+
+content:
+  - name: innhold
+    label: Nettsideinnhold
+    type: file
+    path: content/innhold.json
+    fields:
+      - name: info
+        label: Generell info
+        type: object
+        fields:
+          - { name: navn, label: Salongnavn, type: string }
+          - { name: slagord, label: Slagord (under navnet), type: string }
+          - { name: kortBeskrivelse, label: Kort beskrivelse (hero), type: text }
+          - { name: telefon, label: Telefon, type: string }
+          - { name: epost, label: E-post, type: string }
+          - { name: adresseGate, label: Gateadresse, type: string }
+          - { name: adressePostnr, label: Postnr/sted, type: string }
+          - { name: bookingUrl, label: "Booking-lenke (Timma)", type: string }
+          - { name: instagram, label: Instagram-lenke, type: string }
+          - { name: facebook, label: Facebook-lenke, type: string }
+
+      - name: apningstider
+        label: Åpningstider
+        type: object
+        list: true
+        fields:
+          - { name: dag, label: Dag, type: string }
+          - { name: tid, label: Tid, type: string }
+
+      - name: kategorier
+        label: Behandlinger & priser
+        type: object
+        list: true
+        fields:
+          - { name: tittel, label: "Kategori (f.eks. Frisør)", type: string }
+          - { name: ikon, label: Symbol/ikon, type: string }
+          - name: behandlinger
+            label: Behandlinger
+            type: object
+            list: true
+            fields:
+              - { name: navn, label: Navn, type: string }
+              - { name: pris, label: "Pris (f.eks. «fra 690»)", type: string }
+
+      - { name: omOss, label: Om oss-tekst, type: text }
