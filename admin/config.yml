@@ -1,0 +1,71 @@
+# ============================================================
+# CMS-konfigurasjon for Unique Hair & Beauty
+# Fungerer med både Sveltia CMS og Decap CMS.
+# ============================================================
+
+backend:
+  name: github
+  repo: BRUKERNAVN/unique-hair-beauty   # ← BYTT til ditt GitHub repo (f.eks. GmailHelene/unique-hair-beauty)
+  branch: main
+
+# Lar deg teste CMS-et lokalt med:  npx @sveltia/cms-server   (eller: npx decap-server)
+local_backend: true
+
+# Språk i redigeringsgrensesnittet
+locale: no
+
+media_folder: "assets"        # hvor opplastede bilder lagres
+public_folder: "/assets"
+
+collections:
+  - name: "innhold"
+    label: "Nettsideinnhold"
+    delete: false
+    files:
+      - name: "side"
+        label: "Innhold på siden"
+        file: "content/innhold.json"
+        description: "Rediger tekster, kontaktinfo, behandlinger og priser her."
+        fields:
+          - label: "Generell info"
+            name: "info"
+            widget: "object"
+            fields:
+              - { label: "Salongnavn", name: "navn", widget: "string" }
+              - { label: "Slagord (under navnet)", name: "slagord", widget: "string" }
+              - { label: "Kort beskrivelse (hero)", name: "kortBeskrivelse", widget: "text" }
+              - { label: "Telefon", name: "telefon", widget: "string", required: false }
+              - { label: "E-post", name: "epost", widget: "string", required: false }
+              - { label: "Gateadresse", name: "adresseGate", widget: "string", required: false }
+              - { label: "Postnr/sted", name: "adressePostnr", widget: "string", default: "3340 Åmot" }
+              - { label: "Booking-lenke (Timma)", name: "bookingUrl", widget: "string", required: false }
+              - { label: "Instagram-lenke", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook-lenke", name: "facebook", widget: "string", required: false }
+
+          - label: "Åpningstider"
+            name: "apningstider"
+            widget: "list"
+            label_singular: "dag"
+            summary: "{{fields.dag}}: {{fields.tid}}"
+            fields:
+              - { label: "Dag", name: "dag", widget: "string" }
+              - { label: "Tid", name: "tid", widget: "string" }
+
+          - label: "Behandlinger & priser"
+            name: "kategorier"
+            widget: "list"
+            label_singular: "kategori"
+            summary: "{{fields.tittel}}"
+            fields:
+              - { label: "Kategori (f.eks. Frisør)", name: "tittel", widget: "string" }
+              - { label: "Symbol/ikon", name: "ikon", widget: "string", default: "✦", required: false }
+              - label: "Behandlinger"
+                name: "behandlinger"
+                widget: "list"
+                label_singular: "behandling"
+                summary: "{{fields.navn}} – {{fields.pris}} kr"
+                fields:
+                  - { label: "Navn", name: "navn", widget: "string" }
+                  - { label: "Pris (f.eks. «fra 690»)", name: "pris", widget: "string" }
+
+          - { label: "Om oss-tekst", name: "omOss", widget: "text" }

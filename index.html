@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unique Hair & Beauty – Frisør, negler og vipper i Åmot</title>
+  <meta name="description" content="Unique Hair & Beauty i Åmot tilbyr frisør, negledesign og vippedesign i et lyst og elegant miljø. Bestill time enkelt på nett." />
+
+  <!-- Open Graph (deling på Facebook/Insta) -->
+  <meta property="og:title" content="Unique Hair & Beauty – Åmot" />
+  <meta property="og:description" content="Frisør · Negledesign · Vippedesign i Åmot." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGASJON ===================== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">
+        <!-- Bytt ut med logo: <img src="assets/logo.png" alt="Unique Hair & Beauty" class="nav__logo"> -->
+        <span class="nav__brand-text">Unique <em>Hair &amp; Beauty</em></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#behandlinger">Behandlinger</a>
+        <a href="#om">Om oss</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#" class="btn btn--gold nav__cta" data-booking>Bestill time</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content frost">
+      <p class="hero__eyebrow" data-slagord>Frisør · Negledesign · Vippedesign</p>
+      <h1 class="hero__title" data-navn>Unique Hair &amp; Beauty</h1>
+      <p class="hero__lead" data-kort>En liten, eksklusiv salong i Åmot.</p>
+      <div class="hero__actions">
+        <a href="#" class="btn btn--gold" data-booking>Bestill time</a>
+        <a href="#behandlinger" class="btn btn--ghost">Se behandlinger</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BEHANDLINGER & PRISER ===================== -->
+  <section class="section" id="behandlinger">
+    <div class="section__head">
+      <p class="eyebrow">Prisliste</p>
+      <h2>Behandlinger &amp; priser</h2>
+      <p class="section__sub">Priser er veiledende. Ta gjerne kontakt for et uforpliktende tilbud.</p>
+    </div>
+
+    <div class="cards" id="prisCards">
+      <!-- Fylles automatisk fra js/data.js -->
+    </div>
+
+    <div class="section__cta">
+      <a href="#" class="btn btn--gold" data-booking>Bestill time nå</a>
+    </div>
+  </section>
+
+  <!-- ===================== OM OSS ===================== -->
+  <section class="section section--alt" id="om">
+    <div class="om">
+      <div class="om__media frost" aria-hidden="true">
+        <!-- Bytt ut med bilde av salongen: <img src="assets/salong.jpg" alt="Salongen"> -->
+        <span class="om__placeholder">Bilde av salongen</span>
+      </div>
+      <div class="om__text">
+        <p class="eyebrow">Om oss</p>
+        <h2>Et sted som føles helt deg</h2>
+        <p data-omoss></p>
+        <a href="#kontakt" class="btn btn--ghost">Finn oss</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KONTAKT ===================== -->
+  <section class="section" id="kontakt">
+    <div class="section__head">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Velkommen innom</h2>
+    </div>
+
+    <div class="kontakt">
+      <div class="kontakt__info frost">
+        <h3>Kontaktinformasjon</h3>
+        <ul class="kontakt__list">
+          <li><span>Adresse</span><strong data-adresse>Åmot</strong></li>
+          <li><span>Telefon</span><strong><a data-tel href="#">—</a></strong></li>
+          <li><span>E-post</span><strong><a data-epost href="#">—</a></strong></li>
+        </ul>
+
+        <h3>Åpningstider</h3>
+        <ul class="kontakt__hours" id="apningstider"></ul>
+
+        <div class="kontakt__social" id="social"></div>
+
+        <a href="#" class="btn btn--gold kontakt__book" data-booking>Bestill time</a>
+      </div>
+
+      <div class="kontakt__map frost">
+        <!-- Google Maps: erstatt q= med nøyaktig adresse når den er klar -->
+        <iframe
+          title="Kart til Unique Hair & Beauty"
+          src="https://www.google.com/maps?q=Åmot,%203340&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__brand">Unique <em>Hair &amp; Beauty</em></p>
+    <p class="footer__small">© <span id="year"></span> Unique Hair &amp; Beauty · Åmot ·
+      <a href="#top">Til toppen</a></p>
+    <p class="footer__credit">Nettside av <a href="https://helene.cloud" target="_blank" rel="noopener">helene.cloud</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

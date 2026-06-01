@@ -1,0 +1,10 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Node (kun hvis du legger til verktøy senere)
+node_modules/
+
+# Lokale CMS-test-filer
+.sveltia/
