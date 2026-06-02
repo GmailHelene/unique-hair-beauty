@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Oppdater <loc> med riktig domene når siden er publisert. -->
+<!-- Bytt <loc> til eget domene når det kobles på (f.eks. https://uniquehairbeauty.no/). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://uniquehairbeauty.no/</loc>
+    <loc>https://uniquehb.netlify.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

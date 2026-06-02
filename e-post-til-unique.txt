@@ -1,0 +1,24 @@
+Hei Janina (og Celine)! 😊
+
+Jeg har nå jobbet litt med nettside for dere, og har
+laget to designforslag – velg det dere liker best:
+
+Forslag 1 – kjølig og klassisk (hvitt, beige, frostet glass, gulldetaljer):
+👉 https://uniquehb.netlify.app/
+Forslag 2 – varmt og romantisk (blush og rose-gull):
+👉 https://uniquehb.netlify.app/design2.html
+Begge har akkurat samme innhold – kun stilen er forskjellig.
+
+Dette er på plass: forsiden, behandlinger & priser, «Om oss» (med dere to), kontakt med kart, åpningstider, «Bestill time»-knapper rett til Timma, og lenker til Instagram og Facebook. Siden er også søkbar på Google. Behandlinger, priser og åpningstider må dere huske å endre så det blir riktig.
+
+Dere kan enkelt endre alt selv: 
+Dere får en egen innlogging her: https://portal.helene.cloud
+Brukernavn: beautybyjcp@gmail.com
+Passord: unique-123 (dere kan bytte det selv under «Konto»)
+Der logger dere inn og endrer behandlinger, priser, åpningstider, tekst og bilder i et enkelt skjema. Vil dere se hvordan det blir før det publiseres? Trykk «Forhåndsvis». Fornøyde? Trykk «Publiser», så er siden oppdatert i løpet av et minutt. 
+
+Eget domene? Vil dere ha en egen adresse, i stedet for netlify adressen? Da kan dere sjekke/bestille den på domeneshop.no og gi meg beskjed når den er aktiv, så sier jeg videre hva jeg trenger fra domeneshop.
+
+Resten – priser, tekst, logo og bilder – kan dere fint legge inn selv via innloggingen. Men vil dere heller at jeg legger inn logo/bilder for dere, send dem gjerne, så ordner jeg det.
+
+Si fra hvilket design dere foretrekker, så gjør jeg det til hovedsiden, og evt. andre ønsker. :)
