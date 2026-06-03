@@ -52,7 +52,8 @@
     setText("[data-navn]", info.navn);
     setText("[data-slagord]", info.slagord);
     setText("[data-kort]", info.kortBeskrivelse);
-    setText("[data-omoss]", D.omOss);
+    const omEl = $("[data-omoss]");
+    if (omEl) omEl.innerHTML = D.omOss || ""; // støtter rik tekst (fet/lenker/lister)
 
     /* ---------- Kontaktinfo ---------- */
     const adresse = [info.adresseGate, info.adressePostnr].filter(Boolean).join(", ");
