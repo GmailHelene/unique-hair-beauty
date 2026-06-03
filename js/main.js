@@ -8,21 +8,39 @@
   const $  = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  // Forhåndsvisning fra Studio-portalen: når siden vises i en iframe med
-  // #preview, venter vi på innhold via postMessage i stedet for å hente fila.
-  const inPreview = window.parent !== window && location.hash.indexOf("preview") !== -1;
-  if (inPreview) {
+  const liveFetch = () => fetch("content/innhold.json", { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("ikke funnet"); return r.json(); })
+    .then(render)
+    .catch(() => render(window.SALON_DATA || {}));
+
+  const srcMatch = location.hash.match(/preview-src=([^&]+)/);
+  const inIframePreview = window.parent !== window && location.hash.indexOf("preview") !== -1;
+
+  if (srcMatch) {
+    // Delbar forhåndsvisnings-lenke: hent utkastet fra Studio-portalen.
+    const url = decodeURIComponent(srcMatch[1]);
+    showPreviewBanner();
+    fetch(url, { cache: "no-store" })
+      .then(r => r.json())
+      .then(j => render(j.content || {}))
+      .catch(liveFetch);
+  } else if (inIframePreview) {
+    // Forhåndsvisning inne i portalen (iframe): vent på innhold via postMessage.
     window.addEventListener("message", (e) => {
       const m = e.data;
       if (m && m.type === "studioportal-preview") render(m.content || {});
     });
     try { window.parent.postMessage({ type: "studioportal-ready" }, "*"); } catch (e) {}
   } else {
-    // Hent live-innhold; fall tilbake til data.js (window.SALON_DATA) ved feil.
-    fetch("content/innhold.json", { cache: "no-store" })
-      .then(r => { if (!r.ok) throw new Error("ikke funnet"); return r.json(); })
-      .then(render)
-      .catch(() => render(window.SALON_DATA || {}));
+    liveFetch();
+  }
+
+  function showPreviewBanner() {
+    const bar = document.createElement("div");
+    bar.textContent = "Forhåndsvisning – ikke publisert ennå";
+    bar.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:9999;background:#c4a35a;color:#fff;text-align:center;font:500 13px/2.6 sans-serif;letter-spacing:1px;";
+    document.addEventListener("DOMContentLoaded", () => { document.body.appendChild(bar); });
+    if (document.body) document.body.appendChild(bar);
   }
 
   function render(D) {
