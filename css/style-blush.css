@@ -182,8 +182,8 @@ a { color: inherit; text-decoration: none; }
 .galleri__item:hover img { transform: scale(1.06); }
 
 /* ---- INLINE BOOKING ---- */
-.booking-embed { max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; min-height: 600px; border: 1px solid var(--line); }
-.booking-embed iframe { width: 100%; height: 760px; border: 0; display: block; background: #fff; }
+.booking-embed { max-width: 720px; margin: 0 auto; border-radius: 20px; overflow: hidden; min-height: 360px; border: 1px solid var(--line); }
+.booking-embed iframe { width: 100%; height: 440px; border: 0; display: block; background: #fff; }
 
 /* ---- ÅPENT NÅ-BADGE ---- */
 .status-badge { display: inline-flex; align-items: center; gap: .45em; font-family: var(--sans); font-size: .68rem; font-weight: 400; letter-spacing: .5px; text-transform: uppercase; padding: .28em .75em; border-radius: 999px; vertical-align: middle; }
