@@ -106,6 +106,59 @@
       omMedia.innerHTML = `<img src="${info.salongBilde}" alt="${info.navn || "Salongen"}">`;
       omMedia.removeAttribute("aria-hidden");
     }
+
+    /* ---------- Bildegalleri ---------- */
+    const galleriSec = $("#galleri");
+    const galleriGrid = $("#galleriGrid");
+    const bilder = (D.galleri || []).map(g => g && g.bilde).filter(Boolean);
+    if (galleriSec && galleriGrid) {
+      if (bilder.length) {
+        galleriGrid.innerHTML = bilder.map((src, i) =>
+          `<a class="galleri__item" href="${src}" target="_blank" rel="noopener">
+             <img src="${src}" alt="${(info.navn || "Galleri")} – bilde ${i + 1}" loading="lazy">
+           </a>`).join("");
+        galleriSec.hidden = false;
+      } else {
+        galleriSec.hidden = true; // skjul seksjonen hvis ingen bilder
+      }
+    }
+
+    /* ---------- Inline Timma-booking ---------- */
+    const bookingEmbed = $("#bookingEmbed");
+    if (bookingEmbed && info.bookingUrl) {
+      bookingEmbed.innerHTML =
+        `<iframe src="${info.bookingUrl}" title="Bestill time" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+    }
+
+    /* ---------- "Åpent nå"-indikator ---------- */
+    renderAapent(D.apningstider || []);
+  }
+
+  /* ---------- Hjelper: er salongen åpen nå? ---------- */
+  function renderAapent(apningstider) {
+    const badge = $("#aapentNaa");
+    if (!badge) return;
+    const days = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+    const now = new Date();
+    const todayName = days[now.getDay()].toLowerCase();
+    const entry = (apningstider || []).find(d => (d.dag || "").toLowerCase().includes(todayName));
+    let open = false, label = "Stengt i dag";
+    if (entry) {
+      const m = (entry.tid || "").match(/(\d{1,2})(?:[.:](\d{2}))?\s*[–-]\s*(\d{1,2})(?:[.:](\d{2}))?/);
+      if (m) {
+        const openMin = (+m[1]) * 60 + (+(m[2] || 0));
+        const closeMin = (+m[3]) * 60 + (+(m[4] || 0));
+        const cur = now.getHours() * 60 + now.getMinutes();
+        open = cur >= openMin && cur < closeMin;
+        label = open ? `Åpent nå – til kl ${m[3]}` : "Stengt nå";
+      } else {
+        label = entry.tid && entry.tid.toLowerCase() !== "stengt" ? entry.tid : "Stengt i dag";
+      }
+    }
+    badge.classList.toggle("is-open", open);
+    badge.classList.toggle("is-closed", !open);
+    badge.innerHTML = `<span class="status-dot"></span>${label}`;
   }
 
   /* ---------- Mobilmeny (uavhengig av innhold) ---------- */

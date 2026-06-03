@@ -137,8 +137,9 @@
 
       <nav class="nav__links" id="navLinks" aria-label="Hovedmeny">
         <a href="#behandlinger">Behandlinger</a>
+        <a href="#galleri">Galleri</a>
         <a href="#om">Om oss</a>
-        <a href="#faq">Spørsmål</a>
+        <a href="#bestill">Bestill</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#" class="btn btn--gold nav__cta" data-booking>Bestill time</a>
       </nav>
@@ -207,6 +208,25 @@
       </div>
     </section>
 
+    <!-- ===================== GALLERI ===================== -->
+    <section class="section" id="galleri" aria-labelledby="galleri-tittel" hidden>
+      <div class="section__head">
+        <p class="eyebrow">Galleri</p>
+        <h2 id="galleri-tittel">Litt av det vi lager</h2>
+      </div>
+      <div class="galleri" id="galleriGrid"></div>
+    </section>
+
+    <!-- ===================== BESTILL (inline Timma) ===================== -->
+    <section class="section section--alt" id="bestill" aria-labelledby="bestill-tittel">
+      <div class="section__head">
+        <p class="eyebrow">Bestill time</p>
+        <h2 id="bestill-tittel">Book enkelt på nett</h2>
+        <p class="section__sub">Velg behandling og tidspunkt direkte her – eller <a href="#" data-booking>åpne booking i nytt vindu</a>.</p>
+      </div>
+      <div class="booking-embed frost" id="bookingEmbed"></div>
+    </section>
+
     <!-- ===================== FAQ (bra for AEO/AI-svarmotorer) ===================== -->
     <section class="section" id="faq" aria-labelledby="faq-tittel">
       <div class="section__head">
@@ -253,7 +273,7 @@
             <li><span>E-post</span><strong><a data-epost href="#">—</a></strong></li>
           </ul>
 
-          <h3>Åpningstider</h3>
+          <h3>Åpningstider <span id="aapentNaa" class="status-badge"></span></h3>
           <ul class="kontakt__hours" id="apningstider"></ul>
 
           <div class="kontakt__social" id="social"></div>

@@ -244,6 +244,24 @@ a { color: inherit; text-decoration: none; }
 .faq__item[open] summary::after { transform: rotate(45deg); }
 .faq__item p { padding: 0 1.5rem 1.3rem; color: var(--ink-soft); margin: 0; }
 
+/* ===================== GALLERI ===================== */
+.galleri { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: .9rem; max-width: var(--maxw); margin: 0 auto; }
+.galleri__item { display: block; aspect-ratio: 1 / 1; border-radius: 16px; overflow: hidden; border: 1px solid var(--frost-brd); box-shadow: var(--shadow); }
+.galleri__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.galleri__item:hover img { transform: scale(1.06); }
+
+/* ===================== INLINE BOOKING ===================== */
+.booking-embed { max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; min-height: 600px; }
+.booking-embed iframe { width: 100%; height: 760px; border: 0; display: block; background: #fff; }
+
+/* ===================== ÅPENT NÅ-BADGE ===================== */
+.status-badge { display: inline-flex; align-items: center; gap: .45em; font-family: var(--sans); font-size: .68rem; font-weight: 400; letter-spacing: .5px; text-transform: uppercase; padding: .28em .75em; border-radius: 999px; vertical-align: middle; }
+.status-badge .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.status-badge.is-open { background: rgba(54, 163, 90, .14); color: #2f7a44; }
+.status-badge.is-open .status-dot { background: #36a35a; box-shadow: 0 0 0 3px rgba(54, 163, 90, .2); }
+.status-badge.is-closed { background: rgba(150, 90, 90, .12); color: #9a5a5a; }
+.status-badge.is-closed .status-dot { background: #b5675f; }
+
 /* ===================== FOOTER ===================== */
 .footer { text-align: center; padding: 3rem 1.5rem 2.5rem; border-top: 1px solid rgba(196,163,90,.2); margin-top: 3rem; }
 .footer__brand { font-family: var(--serif); font-size: 1.4rem; }
