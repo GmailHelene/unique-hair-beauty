@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" role="img" aria-label="Unique Hair & Beauty">
+  <!-- Redigerbar wordmark. Bruker Cormorant Garamond hvis tilgjengelig, ellers serif-fallback.
+       For garantert lik gjengivelse overalt: bruk logo.png. -->
+  <text x="450" y="132" text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-size="96" font-weight="600">
+    <tspan fill="#3a342b">Unique </tspan><tspan fill="#a8853f" font-style="italic">Hair &amp; Beauty</tspan>
+  </text>
+</svg>
