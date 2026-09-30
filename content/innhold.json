@@ -1,17 +1,126 @@
 {
   "info": {
+    "logo": "assets/logo.png",
     "navn": "Unique Hair & Beauty",
-    "slagord": "Frisør · Negledesign · Vippedesign",
-    "kortBeskrivelse": "En liten, eksklusiv salong i Åmot hvor frisør, negledesign og vippedesign møtes under ett tak. Her får du ro, kvalitet og et resultat som føles helt deg.",
-    "telefon": "972 99 191",
     "epost": "beautybyjcp@gmail.com",
+    "slagord": "Frisør · Negledesign · Vippedesign",
+    "telefon": "972 99 191",
+    "facebook": "https://www.facebook.com/profile.php?id=61584111800210",
+    "instagram": "https://www.instagram.com/unique.hair.and.beauty",
+    "bookingUrl": "https://bestill.timma.no/uniquehairandbeauty",
     "adresseGate": "Eikerveien 38B",
     "adressePostnr": "3340 Åmot",
-    "bookingUrl": "https://bestill.timma.no/uniquehairandbeauty",
-    "instagram": "https://www.instagram.com/unique.hair.and.beauty",
-    "facebook": "https://www.facebook.com/profile.php?id=61584111800210",
-    "logo": "assets/logo.png"
+    "kortBeskrivelse": "En liten, eksklusiv salong i Åmot hvor frisør, negledesign og vippedesign møtes under ett tak. Her får du ro, kvalitet og et resultat som føles helt deg."
   },
+  "omOss": "Hos Unique Hair & Beauty møter du Celine og Janina – to dyktige damer med ekte lidenskap for faget sitt. Vi er opptatt av det lille ekstra, tar oss tid til hver enkelt kunde, og kombinerer håndverk innen frisør, negler og vipper i et lyst, rolig og elegant miljø. Enten du skal ha en frisk farge, et nytt sett negler eller fyldige vipper – målet vårt er at du skal gå herfra og føle deg helt unik.",
+  "galleri": [
+    {
+      "bilde": ""
+    },
+    {
+      "bilde": ""
+    }
+  ],
+  "kategorier": [
+    {
+      "ikon": "✂",
+      "tittel": "Frisør",
+      "behandlinger": [
+        {
+          "navn": "Klipp (Prisen blir beregnet etter tid)",
+          "pris": "fra 320 "
+        },
+        {
+          "navn": "Farge ettervekst med tørk",
+          "pris": "940"
+        },
+        {
+          "navn": "Farge ettervekst med klipp og tørk",
+          "pris": "1835"
+        },
+        {
+          "navn": "Farge (lengde av håret er avgjørende for pris)",
+          "pris": "fra 1285"
+        },
+        {
+          "navn": "Farge ettervekst med hårkur, klipp og styling ",
+          "pris": "2600"
+        },
+        {
+          "navn": "Farge hele håret, kur, klipp og styling",
+          "pris": "2880"
+        },
+        {
+          "navn": "Striper ettervekst",
+          "pris": "fra 1585"
+        },
+        {
+          "navn": "Striper (lengde på håret er avgjørende for pris)",
+          "pris": "fra 1257"
+        },
+        {
+          "navn": "Hår Spa",
+          "pris": "1060"
+        },
+        {
+          "navn": "Vask med styling  (her er tiden avgjørende for pris)",
+          "pris": "fra 405"
+        }
+      ]
+    },
+    {
+      "ikon": "✦",
+      "tittel": "Negledesign",
+      "behandlinger": [
+        {
+          "navn": "Nytt sett gel/akryl",
+          "pris": "fra 750"
+        },
+        {
+          "navn": "Påfyll",
+          "pris": "fra 590"
+        },
+        {
+          "navn": "Gellack (shellac)",
+          "pris": "fra 450"
+        },
+        {
+          "navn": "Manikyr",
+          "pris": "fra 490"
+        },
+        {
+          "navn": "Nail art (per negl)",
+          "pris": "fra 30"
+        }
+      ]
+    },
+    {
+      "ikon": "❀",
+      "tittel": "Vippedesign",
+      "behandlinger": [
+        {
+          "navn": "Klassiske vippeextensions",
+          "pris": "fra 790"
+        },
+        {
+          "navn": "Volum-vipper",
+          "pris": "fra 990"
+        },
+        {
+          "navn": "Påfyll vipper",
+          "pris": "fra 490"
+        },
+        {
+          "navn": "Vippeløft (lash lift)",
+          "pris": "fra 650"
+        },
+        {
+          "navn": "Bryn – farge & forming",
+          "pris": "fra 350"
+        }
+      ]
+    }
+  ],
   "apningstider": [
     {
       "dag": "Mandag",
@@ -41,98 +150,5 @@
       "dag": "Søndag",
       "tid": "Stengt"
     }
-  ],
-  "kategorier": [
-    {
-      "tittel": "Frisør",
-      "ikon": "✂",
-      "behandlinger": [
-        {
-          "navn": "Klipp dame",
-          "pris": "fra 690"
-        },
-        {
-          "navn": "Klipp herre",
-          "pris": "fra 490"
-        },
-        {
-          "navn": "Klipp barn (u/12 år)",
-          "pris": "fra 350"
-        },
-        {
-          "navn": "Farge / helfarge",
-          "pris": "fra 990"
-        },
-        {
-          "navn": "Striper / folier",
-          "pris": "fra 1 290"
-        },
-        {
-          "navn": "Föning & styling",
-          "pris": "fra 450"
-        }
-      ]
-    },
-    {
-      "tittel": "Negledesign",
-      "ikon": "✦",
-      "behandlinger": [
-        {
-          "navn": "Nytt sett gel/akryl",
-          "pris": "fra 750"
-        },
-        {
-          "navn": "Påfyll",
-          "pris": "fra 590"
-        },
-        {
-          "navn": "Gellack (shellac)",
-          "pris": "fra 450"
-        },
-        {
-          "navn": "Manikyr",
-          "pris": "fra 490"
-        },
-        {
-          "navn": "Nail art (per negl)",
-          "pris": "fra 30"
-        }
-      ]
-    },
-    {
-      "tittel": "Vippedesign",
-      "ikon": "❀",
-      "behandlinger": [
-        {
-          "navn": "Klassiske vippeextensions",
-          "pris": "fra 790"
-        },
-        {
-          "navn": "Volum-vipper",
-          "pris": "fra 990"
-        },
-        {
-          "navn": "Påfyll vipper",
-          "pris": "fra 490"
-        },
-        {
-          "navn": "Vippeløft (lash lift)",
-          "pris": "fra 650"
-        },
-        {
-          "navn": "Bryn – farge & forming",
-          "pris": "fra 350"
-        }
-      ]
-    }
-  ],
-  "galleri": [
-    {
-      "bilde": ""
-    },
-    {
-      "bilde": ""
-    }
-  ],
-  "omOss": "Hos Unique Hair & Beauty møter du Celine og Janina – to dyktige damer med ekte lidenskap for faget sitt. Vi er opptatt av det lille ekstra, tar oss tid til hver enkelt kunde, og kombinerer håndverk innen frisør, negler og vipper i et lyst, rolig og elegant miljø. Enten du skal ha en frisk farge, et nytt sett negler eller fyldige vipper – målet vårt er at du skal gå herfra og føle deg helt unik."
+  ]
 }
