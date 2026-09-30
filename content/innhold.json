@@ -3,7 +3,7 @@
     "navn": "Unique Hair & Beauty",
     "slagord": "Frisør · Negledesign · Vippedesign",
     "kortBeskrivelse": "En liten, eksklusiv salong i Åmot hvor frisør, negledesign og vippedesign møtes under ett tak. Her får du ro, kvalitet og et resultat som føles helt deg.",
-    "telefon": "97 29 91 91",
+    "telefon": "972 99 191",
     "epost": "beautybyjcp@gmail.com",
     "adresseGate": "Eikerveien 38B",
     "adressePostnr": "3340 Åmot",
@@ -23,11 +23,11 @@
     },
     {
       "dag": "Onsdag",
-      "tid": "09–17"
+      "tid": "09-17"
     },
     {
       "dag": "Torsdag",
-      "tid": "09–17"
+      "tid": "09-17"
     },
     {
       "dag": "Fredag",
@@ -44,58 +44,28 @@
   ],
   "kategorier": [
     {
-      "tittel": "Negledesign",
-      "ikon": "✦",
-      "behandlinger": [
-        {
-          "navn": "Nytt sett gelenegler",
-          "pris": "1030"
-        },
-        {
-          "navn": "Etterfyll gelenegler",
-          "pris": "865"
-        },
-        {
-          "navn": "Gelelakk",
-          "pris": "535"
-        },
-        {
-          "navn": "Minimanikyr ",
-          "pris": "410"
-        },
-        {
-          "navn": "Fjerning av gelenegler",
-          "pris": "410"
-        },
-        {
-          "navn": "Fjerning av gelelakk",
-          "pris": "340"
-        }
-      ]
-    },
-    {
-      "tittel": "Klipp",
+      "tittel": "Frisør",
       "ikon": "✂",
       "behandlinger": [
         {
-          "navn": "Klipp 15 min",
-          "pris": "310"
+          "navn": "Klipp dame",
+          "pris": "fra 690"
         },
         {
-          "navn": "Klipp inntil 30 min",
-          "pris": "540"
+          "navn": "Klipp herre",
+          "pris": "fra 490"
         },
         {
-          "navn": "Klipp inntil 45 min",
-          "pris": "695"
+          "navn": "Klipp barn (u/12 år)",
+          "pris": "fra 350"
         },
         {
-          "navn": "Klipp inntil 60 min",
-          "pris": "895"
+          "navn": "Farge / helfarge",
+          "pris": "fra 990"
         },
         {
-          "navn": "Klipp inntil 75 min ",
-          "pris": "975"
+          "navn": "Striper / folier",
+          "pris": "fra 1 290"
         },
         {
           "navn": "Föning & styling",
@@ -104,36 +74,62 @@
       ]
     },
     {
-      "tittel": "Vippeextensions",
+      "tittel": "Negledesign",
+      "ikon": "✦",
+      "behandlinger": [
+        {
+          "navn": "Nytt sett gel/akryl",
+          "pris": "fra 750"
+        },
+        {
+          "navn": "Påfyll",
+          "pris": "fra 590"
+        },
+        {
+          "navn": "Gellack (shellac)",
+          "pris": "fra 450"
+        },
+        {
+          "navn": "Manikyr",
+          "pris": "fra 490"
+        },
+        {
+          "navn": "Nail art (per negl)",
+          "pris": "fra 30"
+        }
+      ]
+    },
+    {
+      "tittel": "Vippedesign",
       "ikon": "❀",
       "behandlinger": [
         {
-          "navn": "Nytt sett klassiske vippeextensions",
-          "pris": "1570"
+          "navn": "Klassiske vippeextensions",
+          "pris": "fra 790"
         },
         {
-          "navn": "Påfyll klassiske vippextensions",
-          "pris": "890"
+          "navn": "Volum-vipper",
+          "pris": "fra 990"
         },
         {
-          "navn": "Nytt sett mix vippeextensions",
-          "pris": "1890"
+          "navn": "Påfyll vipper",
+          "pris": "fra 490"
         },
         {
-          "navn": "Påfyll mix vippeextensions",
-          "pris": "990"
+          "navn": "Vippeløft (lash lift)",
+          "pris": "fra 650"
         },
         {
-          "navn": "Nytt sett volum vippeextensions",
-          "pris": "1990"
-        },
-        {
-          "navn": "Påfyll volum vippeextensions ",
-          "pris": "990"
+          "navn": "Bryn – farge & forming",
+          "pris": "fra 350"
         }
       ]
     }
   ],
-  "galleri": [],
-  "omOss": "Hos Unique Hair &amp; Beauty møter du Celina og Janina – to dyktige damer med ekte lidenskap for faget sitt. Vi er opptatt av det lille ekstra, tar oss tid til hver enkelt kunde, og kombinerer håndverk innen frisør, negler og vipper i et lyst, rolig og elegant miljø. Enten du skal ha en frisk farge, et nytt sett negler eller fyldige vipper – målet vårt er at du skal gå herfra og føle deg helt unik."
+  "galleri": [
+    {
+      "bilde": ""
+    }
+  ],
+  "omOss": "Hos Unique Hair & Beauty møter du Celine og Janina – to dyktige damer med ekte lidenskap for faget sitt. Vi er opptatt av det lille ekstra, tar oss tid til hver enkelt kunde, og kombinerer håndverk innen frisør, negler og vipper i et lyst, rolig og elegant miljø. Enten du skal ha en frisk farge, et nytt sett negler eller fyldige vipper – målet vårt er at du skal gå herfra og føle deg helt unik."
 }
