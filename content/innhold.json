@@ -73,24 +73,20 @@
       "tittel": "Negledesign",
       "behandlinger": [
         {
-          "navn": "Nytt sett gel/akryl",
-          "pris": "fra 750"
+          "navn": "Nytt sett gel",
+          "pris": "1030"
         },
         {
-          "navn": "Påfyll",
-          "pris": "fra 590"
+          "navn": "Etterfyll Gelnegler",
+          "pris": "865"
         },
         {
           "navn": "Gellack (shellac)",
-          "pris": "fra 450"
+          "pris": "535"
         },
         {
-          "navn": "Manikyr",
-          "pris": "fra 490"
-        },
-        {
-          "navn": "Nail art (per negl)",
-          "pris": "fra 30"
+          "navn": "Minimanikyr",
+          "pris": "410"
         }
       ]
     },
@@ -99,24 +95,16 @@
       "tittel": "Vippedesign",
       "behandlinger": [
         {
-          "navn": "Klassiske vippeextensions",
-          "pris": "fra 790"
+          "navn": "Påfyll vipper klassiske, mix og volum - her er style og tid avgjørende for pris",
+          "pris": "fra 760 "
         },
         {
-          "navn": "Volum-vipper",
-          "pris": "fra 990"
+          "navn": "Vippeløft klassisk/koreansk",
+          "pris": "1070"
         },
         {
-          "navn": "Påfyll vipper",
-          "pris": "fra 490"
-        },
-        {
-          "navn": "Vippeløft (lash lift)",
-          "pris": "fra 650"
-        },
-        {
-          "navn": "Bryn – farge & forming",
-          "pris": "fra 350"
+          "navn": "Farging av vipper",
+          "pris": "240"
         }
       ]
     }
