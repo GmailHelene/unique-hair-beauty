@@ -10,12 +10,13 @@
     "bookingUrl": "https://bestill.timma.no/uniquehairandbeauty",
     "adresseGate": "Eikerveien 38B",
     "adressePostnr": "3340 Åmot",
-    "kortBeskrivelse": "En liten, eksklusiv salong i Åmot hvor frisør, negledesign og vippedesign møtes under ett tak. Her får du ro, kvalitet og et resultat som føles helt deg."
+    "kortBeskrivelse": "En liten, eksklusiv salong i Åmot hvor frisør, negledesign og vippedesign møtes under ett tak. Her får du ro, kvalitet og et resultat som føles helt deg.",
+    "salongBilde": "assets/img_1328.jpg"
   },
   "omOss": "Hos Unique Hair & Beauty møter du Celine og Janina – to dyktige damer med ekte lidenskap for faget sitt. Vi er opptatt av det lille ekstra, tar oss tid til hver enkelt kunde, og kombinerer håndverk innen frisør, negler og vipper i et lyst, rolig og elegant miljø. Enten du skal ha en frisk farge, et nytt sett negler eller fyldige vipper – målet vårt er at du skal gå herfra og føle deg helt unik.",
   "galleri": [
     {
-      "bilde": ""
+      "bilde": "assets/img_1323.jpg"
     },
     {
       "bilde": ""
